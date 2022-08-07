@@ -1,0 +1,762 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "My First API",
+        "version": "0.1"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api/",
+            "description": "Developing env"
+        }
+    ],
+    "paths": {
+        "/chain-elements": {
+            "get": {
+                "tags": [
+                    "chain-elements"
+                ],
+                "operationId": "b897e53bce54e69df4dd68520e26c2b8",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "chain-elements"
+                ],
+                "operationId": "c26f2045b9083fbf985b93e0d381971f",
+                "parameters": [
+                    {
+                        "name": "chain_id",
+                        "in": "query",
+                        "required": false,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/chain-elements/{chain-element}": {
+            "get": {
+                "tags": [
+                    "chain-elements"
+                ],
+                "operationId": "edb6e1c27f0d4ec0913aca372951925d",
+                "parameters": [
+                    {
+                        "name": "chain-element",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "chain-elements"
+                ],
+                "operationId": "56a857276779946bc89afec56bb36b77",
+                "parameters": [
+                    {
+                        "name": "chain-element",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "chain-elements"
+                ],
+                "operationId": "61c0c5e65e844d16fa354118f905e5b9",
+                "parameters": [
+                    {
+                        "name": "chain-element",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "chain_id": {
+                                        "type": "integer"
+                                    },
+                                    "order": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/chains": {
+            "get": {
+                "tags": [
+                    "chains"
+                ],
+                "operationId": "011c3e81f0b7efa70a0f00d337aa070a",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "chains"
+                ],
+                "operationId": "2221d762f0774d03bbf61df2a0a2cc53",
+                "parameters": [
+                    {
+                        "name": "text",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "group_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/chains/{chain}": {
+            "get": {
+                "tags": [
+                    "chains"
+                ],
+                "operationId": "00b4529499bc798798a0f29770aa7f4f",
+                "parameters": [
+                    {
+                        "name": "chain",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "chains"
+                ],
+                "operationId": "235ca6b7441f2ee681b2423955568cfc",
+                "parameters": [
+                    {
+                        "name": "chain",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "chains"
+                ],
+                "operationId": "df39736372d14e47c78f311969ac3246",
+                "parameters": [
+                    {
+                        "name": "chain",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "group_id": {
+                                        "type": "integer"
+                                    },
+                                    "text": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/groups": {
+            "get": {
+                "tags": [
+                    "groups"
+                ],
+                "operationId": "ecb1e997e72d5d6eef61971f73c30ed6",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Groups"
+                ],
+                "operationId": "0a5bcdb8383a924b255bf4c84455b632",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "text": {
+                                        "type": "string"
+                                    },
+                                    "shared_answers": {
+                                        "type": "boolean"
+                                    },
+                                    "parent_group_id": {
+                                        "type": "integer"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/get-tree": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "operationId": "b071c593414b65fb1694b5399da0beb0",
+                "parameters": [
+                    {
+                        "name": "parent_group_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/get-questions": {
+            "get": {
+                "tags": [
+                    "Groups"
+                ],
+                "operationId": "e4871958eda518b847cacaf309face50",
+                "parameters": [
+                    {
+                        "name": "parent_group_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/groups/{group}": {
+            "get": {
+                "tags": [
+                    "groups"
+                ],
+                "operationId": "b14a80e5d455c675828d5947fb03abb9",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "groups"
+                ],
+                "operationId": "5f1be57e2680a1b003dcd545fc8531fb",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "groups"
+                ],
+                "operationId": "093ccf3fbf7d799f26e93de42893528e",
+                "parameters": [
+                    {
+                        "name": "group",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "text": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/questions": {
+            "get": {
+                "tags": [
+                    "questions"
+                ],
+                "operationId": "d080577c5284be8fce2ce1ff472330f5",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "questions"
+                ],
+                "operationId": "5f382ad46eed42bd36ed5eefa461f692",
+                "parameters": [
+                    {
+                        "name": "text",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    {
+                        "name": "type",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "group_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "chain_element_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "qoptions": {
+                                        "type": "array",
+                                        "items": {
+                                            "properties": {
+                                                "text": {
+                                                    "type": "string"
+                                                },
+                                                "correct": {
+                                                    "type": "boolean"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/questions/{question}": {
+            "get": {
+                "tags": [
+                    "questions"
+                ],
+                "operationId": "9bd6ce2e6b304c9783d33e7c8ce6629f",
+                "parameters": [
+                    {
+                        "name": "question",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "questions"
+                ],
+                "operationId": "66a54f99202bdd451bef337270342675",
+                "parameters": [
+                    {
+                        "name": "question",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "patch": {
+                "tags": [
+                    "questions"
+                ],
+                "operationId": "8f67b09735708b65326804ae1d7cd817",
+                "parameters": [
+                    {
+                        "name": "question",
+                        "in": "path",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "group_id": {
+                                        "type": "integer"
+                                    },
+                                    "text": {
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/files": {
+            "post": {
+                "tags": [
+                    "File"
+                ],
+                "operationId": "473781bae8bd3ec9ac51f1daf48d9e6b",
+                "requestBody": {
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "properties": {
+                                    "file": {
+                                        "type": "file"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "401": {
+                        "description": "Unauthenticated",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                },
+                "security": [
+                    {
+                        "passport": []
+                    }
+                ]
+            }
+        }
+    }
+}
